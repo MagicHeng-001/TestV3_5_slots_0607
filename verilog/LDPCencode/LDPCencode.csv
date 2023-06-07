@@ -1,0 +1,36 @@
+# system info LDPCencode on 2022.12.30.18:22:47
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1672453367
+#
+#
+# Files generated for LDPCencode on 2022.12.30.18:22:47
+files:
+filepath,kind,attributes,module,is_top
+simulation/LDPCencode.v,VERILOG,,LDPCencode,true
+simulation/submodules/LDPCencode_ldpc_0.v,VERILOG,,LDPCencode_ldpc_0,false
+simulation/submodules/LDPCencode_ldpc_0_encoder.v,VERILOG,,LDPCencode_ldpc_0_encoder,false
+simulation/submodules/altera_auto_wimedia_enc_ROM.sv,SYSTEM_VERILOG,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_0_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_1_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_2_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_3_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_4_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_5_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_6_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc_rom_7_data.hex,HEX,,altera_ldpc_wimedia_enc,false
+simulation/submodules/mentor/altera_ldpc_pkg.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_ldpc_wimedia_enc,false
+simulation/submodules/aldec/altera_ldpc_pkg.sv,SYSTEM_VERILOG_ENCRYPT,ALDEC_SPECIFIC,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_pkg.sv,SYSTEM_VERILOG,,altera_ldpc_wimedia_enc,false
+simulation/submodules/mentor/altera_ldpc_wimedia_enc.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_ldpc_wimedia_enc,false
+simulation/submodules/aldec/altera_ldpc_wimedia_enc.sv,SYSTEM_VERILOG_ENCRYPT,ALDEC_SPECIFIC,altera_ldpc_wimedia_enc,false
+simulation/submodules/altera_ldpc_wimedia_enc.sv,SYSTEM_VERILOG,,altera_ldpc_wimedia_enc,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+LDPCencode.ldpc_0,LDPCencode_ldpc_0
+LDPCencode.ldpc_0.encoder,LDPCencode_ldpc_0_encoder
+LDPCencode.ldpc_0.encoder.wimedia,altera_ldpc_wimedia_enc

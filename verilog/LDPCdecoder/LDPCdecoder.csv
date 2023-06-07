@@ -1,0 +1,30 @@
+# system info LDPCdecoder on 2023.01.02.17:36:52
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1672709811
+#
+#
+# Files generated for LDPCdecoder on 2023.01.02.17:36:52
+files:
+filepath,kind,attributes,module,is_top
+simulation/LDPCdecoder.v,VERILOG,,LDPCdecoder,true
+simulation/submodules/LDPCdecoder_ldpc_0.v,VERILOG,,LDPCdecoder_ldpc_0,false
+simulation/submodules/LDPCdecoder_ldpc_0_decoder.v,VERILOG,,LDPCdecoder_ldpc_0_decoder,false
+simulation/submodules/mentor/altera_ldpc_pkg.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_ldpc_wimedia_msa,false
+simulation/submodules/aldec/altera_ldpc_pkg.sv,SYSTEM_VERILOG_ENCRYPT,ALDEC_SPECIFIC,altera_ldpc_wimedia_msa,false
+simulation/submodules/altera_ldpc_pkg.sv,SYSTEM_VERILOG,,altera_ldpc_wimedia_msa,false
+simulation/submodules/mentor/altera_ldpc_wimedia_mat.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_ldpc_wimedia_msa,false
+simulation/submodules/aldec/altera_ldpc_wimedia_mat.sv,SYSTEM_VERILOG_ENCRYPT,ALDEC_SPECIFIC,altera_ldpc_wimedia_msa,false
+simulation/submodules/altera_ldpc_wimedia_mat.sv,SYSTEM_VERILOG,,altera_ldpc_wimedia_msa,false
+simulation/submodules/mentor/altera_ldpc_wimedia_msa.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_ldpc_wimedia_msa,false
+simulation/submodules/aldec/altera_ldpc_wimedia_msa.sv,SYSTEM_VERILOG_ENCRYPT,ALDEC_SPECIFIC,altera_ldpc_wimedia_msa,false
+simulation/submodules/altera_ldpc_wimedia_msa.sv,SYSTEM_VERILOG,,altera_ldpc_wimedia_msa,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+LDPCdecoder.ldpc_0,LDPCdecoder_ldpc_0
+LDPCdecoder.ldpc_0.decoder,LDPCdecoder_ldpc_0_decoder
+LDPCdecoder.ldpc_0.decoder.dec_msa,altera_ldpc_wimedia_msa

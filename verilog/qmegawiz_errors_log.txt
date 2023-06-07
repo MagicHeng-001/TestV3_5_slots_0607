@@ -1,0 +1,106 @@
+
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 04PM:45:21>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 04PM:48:30>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 04PM:48:31>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 04PM:48:39>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 04PM:48:42>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:12:34>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:14:50>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:14:56>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:14:59>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:15:07>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:15:08>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:15:09>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:15:10>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:37:39>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:39:54>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/clk200m.v
+
+May 18 05PM:40:05>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:40:10>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/clk200m.v
+
+May 18 05PM:40:24>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/src/RX/PLL.v
+
+May 18 05PM:40:26>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/clk200m.v
+
+May 18 05PM:40:30>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/wuheng99/Desktop/barker_fcf3/TestV3/verilog/clk10m_200m.v
+
+May 18 06PM:05:10>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/mentor/altera_ldpc_pkg.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="dec_msa"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/altera_ldpc_pkg.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="dec_msa"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/altera_ldpc_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="dec_msa" />
+ <file
+   path="simulation/submodules/mentor/altera_ldpc_wimedia_mat.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="dec_msa"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/altera_ldpc_wimedia_mat.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="dec_msa"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_mat.sv"
+   type="SYSTEM_VERILOG"
+   library="dec_msa" />
+ <file
+   path="simulation/submodules/mentor/altera_ldpc_wimedia_msa.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="dec_msa"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/altera_ldpc_wimedia_msa.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="dec_msa"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_msa.sv"
+   type="SYSTEM_VERILOG"
+   library="dec_msa" />
+ <file
+   path="simulation/submodules/LDPCdecoder_ldpc_0_decoder.v"
+   type="VERILOG"
+   library="decoder" />
+ <file
+   path="simulation/submodules/LDPCdecoder_ldpc_0.v"
+   type="VERILOG"
+   library="ldpc_0" />
+ <file path="simulation/LDPCdecoder.v" type="VERILOG" />
+ <topLevel name="LDPCdecoder" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

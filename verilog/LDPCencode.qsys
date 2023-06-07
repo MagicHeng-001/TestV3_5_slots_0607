@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags="INTERNAL_COMPONENT=true"
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element ldpc_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEMA5F31C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="true" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="ldpc_0.clk" type="clock" dir="end">
+  <port name="clk_clk" internal="clk_clk" />
+ </interface>
+ <interface name="in" internal="ldpc_0.in" type="conduit" dir="end">
+  <port name="in_startofpacket" internal="in_startofpacket" />
+  <port name="in_endofpacket" internal="in_endofpacket" />
+  <port name="in_valid" internal="in_valid" />
+  <port name="in_ready" internal="in_ready" />
+  <port name="in_in_data" internal="in_in_data" />
+ </interface>
+ <interface name="out" internal="ldpc_0.out" type="conduit" dir="end">
+  <port name="out_startofpacket" internal="out_startofpacket" />
+  <port name="out_endofpacket" internal="out_endofpacket" />
+  <port name="out_valid" internal="out_valid" />
+  <port name="out_ready" internal="out_ready" />
+  <port name="out_out_data" internal="out_out_data" />
+ </interface>
+ <interface name="reset" internal="ldpc_0.reset" type="reset" dir="end">
+  <port name="reset_reset_n" internal="reset_reset_n" />
+ </interface>
+ <module
+   name="ldpc_0"
+   kind="altera_ldpc"
+   version="18.1"
+   enabled="1"
+   autoexport="1">
+  <parameter name="ATTENUATION" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="BITSPERSYMBOL" value="1" />
+  <parameter name="CHANNEL" value="1" />
+  <parameter name="CODE" value="0" />
+  <parameter name="EXTRALATENCY" value="0" />
+  <parameter name="ISFULLSTREAMING" value="1" />
+  <parameter name="ISLAYERED" value="1" />
+  <parameter name="ISVARRATE" value="0" />
+  <parameter name="K" value="0" />
+  <parameter name="LAYER" value="10.0" />
+  <parameter name="LDPC_TYPE" value="WiMedia" />
+  <parameter name="LLRPERSYMBOL" value="2" />
+  <parameter name="MODULE" value="Encoder" />
+  <parameter name="N" value="1" />
+  <parameter name="NBCHECKGROUP" value="90" />
+  <parameter name="NBVARGROUP" value="90" />
+  <parameter name="NB_ITE" value="10" />
+  <parameter name="PAR" value="2" />
+  <parameter name="RATE" value="0" />
+  <parameter name="S" value="4" />
+  <parameter name="SOFTBITS" value="3" />
+  <parameter name="TRANSMIT_PARITY" value="0" />
+  <parameter name="design_env" value="NATIVE" />
+  <parameter name="selected_device_family" value="Cyclone V" />
+ </module>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

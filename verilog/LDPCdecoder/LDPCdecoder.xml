@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.01.02.17:36:55"
+ outputDirectory="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEMA5F31C6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="in" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port
+       name="in_startofpacket"
+       direction="input"
+       role="startofpacket"
+       width="1" />
+   <port name="in_endofpacket" direction="input" role="endofpacket" width="1" />
+   <port name="in_valid" direction="input" role="valid" width="1" />
+   <port name="in_ready" direction="output" role="ready" width="1" />
+   <port name="in_cw_in_data" direction="input" role="cw_in_data" width="6" />
+  </interface>
+  <interface name="out" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port
+       name="out_startofpacket"
+       direction="output"
+       role="startofpacket"
+       width="1" />
+   <port
+       name="out_endofpacket"
+       direction="output"
+       role="endofpacket"
+       width="1" />
+   <port name="out_valid" direction="output" role="valid" width="1" />
+   <port name="out_ready" direction="input" role="ready" width="1" />
+   <port name="out_data" direction="output" role="data" width="2" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="LDPCdecoder:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1672709814,AUTO_UNIQUE_ID=(altera_ldpc:18.1:ATTENUATION=1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_SPEEDGRADE=6,BITSPERSYMBOL=1,CHANNEL=1,CODE=0,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,K=0,LAYER=10.0,LDPC_TYPE=WiMedia,LLRPERSYMBOL=2,MODULE=Decoder,N=1,NBCHECKGROUP=90,NBVARGROUP=90,NB_ITE=10,PAR=2,RATE=0,S=4,SOFTBITS=3,THROUGHPUT=0.0,TRANSMIT_PARITY=0,design_env=NATIVE,selected_device_family=Cyclone V(clock_source:18.1:clockFrequency=50000000,clockFrequencyKnown=false,inputClockFrequency=0,resetSynchronousEdges=DEASSERT)(altera_ldpc_dec:18.1:ATTENUATION=1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,BITSPERSYMBOL=2,CHANNEL=1,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,LDPC_TYPE=WiMedia,N=1200,NBCHECKGROUP=12,NBVARGROUP=44,NB_ITE=10,PAR=2,S=4,SOFTBITS=3,TRANSMIT_PARITY=0,design_env=NATIVE(clock_source:18.1:clockFrequency=50000000,clockFrequencyKnown=false,inputClockFrequency=0,resetSynchronousEdges=DEASSERT)(altera_ldpc_wimedia_msa:18.1:ATTENUATION=1,BITSPERSYMBOL=2,CHANNEL=1,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,LDPC_TYPE=DVB,N=1200,NBCHECKGROUP=8,NBVARGROUP=40,NB_ITE=10,PAR=2,S=4,SOFTBITS=3,TRANSMIT_PARITY=0,design_env=NATIVE)(clock:18.1:)(reset:18.1:))(clock:18.1:)(reset:18.1:))"
+   instancePathKey="LDPCdecoder"
+   kind="LDPCdecoder"
+   version="1.0"
+   name="LDPCdecoder">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1672709814" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/LDPCdecoder.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/LDPCdecoder_ldpc_0.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/LDPCdecoder_ldpc_0_decoder.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_pkg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_mat.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.ocp"
+       type="OTHER"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/top_hw/altera_ldpc_hw.tcl" />
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/src/dec/altera_ldpc_dec/altera_ldpc_dec_hw.tcl" />
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/src/ldpc_ucores/dec/altera_ldpc_wimedia_msa/altera_ldpc_wimedia_msa_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:LDPCdecoder "LDPCdecoder"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="LDPCdecoder"><![CDATA["<b>LDPCdecoder</b>" reuses <b>altera_ldpc</b> "<b>submodules/LDPCdecoder_ldpc_0</b>"]]></message>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc "submodules/LDPCdecoder_ldpc_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="ldpc_0"><![CDATA["<b>ldpc_0</b>" reuses <b>altera_ldpc_dec</b> "<b>submodules/LDPCdecoder_ldpc_0_decoder</b>"]]></message>
+   <message level="Info" culprit="ldpc_0"><![CDATA["<b>LDPCdecoder</b>" instantiated <b>altera_ldpc</b> "<b>ldpc_0</b>"]]></message>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc_dec "submodules/LDPCdecoder_ldpc_0_decoder"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="decoder"><![CDATA["<b>decoder</b>" reuses <b>altera_ldpc_wimedia_msa</b> "<b>submodules/altera_ldpc_wimedia_msa</b>"]]></message>
+   <message level="Info" culprit="decoder"><![CDATA["<b>ldpc_0</b>" instantiated <b>altera_ldpc_dec</b> "<b>decoder</b>"]]></message>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc_wimedia_msa "submodules/altera_ldpc_wimedia_msa"</message>
+   <message level="Info" culprit="dec_msa"><![CDATA["<b>decoder</b>" instantiated <b>altera_ldpc_wimedia_msa</b> "<b>dec_msa</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_ldpc:18.1:ATTENUATION=1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_SPEEDGRADE=6,BITSPERSYMBOL=1,CHANNEL=1,CODE=0,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,K=0,LAYER=10.0,LDPC_TYPE=WiMedia,LLRPERSYMBOL=2,MODULE=Decoder,N=1,NBCHECKGROUP=90,NBVARGROUP=90,NB_ITE=10,PAR=2,RATE=0,S=4,SOFTBITS=3,THROUGHPUT=0.0,TRANSMIT_PARITY=0,design_env=NATIVE,selected_device_family=Cyclone V(clock_source:18.1:clockFrequency=50000000,clockFrequencyKnown=false,inputClockFrequency=0,resetSynchronousEdges=DEASSERT)(altera_ldpc_dec:18.1:ATTENUATION=1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,BITSPERSYMBOL=2,CHANNEL=1,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,LDPC_TYPE=WiMedia,N=1200,NBCHECKGROUP=12,NBVARGROUP=44,NB_ITE=10,PAR=2,S=4,SOFTBITS=3,TRANSMIT_PARITY=0,design_env=NATIVE(clock_source:18.1:clockFrequency=50000000,clockFrequencyKnown=false,inputClockFrequency=0,resetSynchronousEdges=DEASSERT)(altera_ldpc_wimedia_msa:18.1:ATTENUATION=1,BITSPERSYMBOL=2,CHANNEL=1,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,LDPC_TYPE=DVB,N=1200,NBCHECKGROUP=8,NBVARGROUP=40,NB_ITE=10,PAR=2,S=4,SOFTBITS=3,TRANSMIT_PARITY=0,design_env=NATIVE)(clock:18.1:)(reset:18.1:))(clock:18.1:)(reset:18.1:)"
+   instancePathKey="LDPCdecoder:.:ldpc_0"
+   kind="altera_ldpc"
+   version="18.1"
+   name="LDPCdecoder_ldpc_0">
+  <parameter name="PAR" value="2" />
+  <parameter name="LDPC_TYPE" value="WiMedia" />
+  <parameter name="RATE" value="0" />
+  <parameter name="BITSPERSYMBOL" value="1" />
+  <parameter name="NB_ITE" value="10" />
+  <parameter name="K" value="0" />
+  <parameter name="selected_device_family" value="Cyclone V" />
+  <parameter name="ISVARRATE" value="0" />
+  <parameter name="N" value="1" />
+  <parameter name="SOFTBITS" value="3" />
+  <parameter name="S" value="4" />
+  <parameter name="EXTRALATENCY" value="0" />
+  <parameter name="NBCHECKGROUP" value="90" />
+  <parameter name="TRANSMIT_PARITY" value="0" />
+  <parameter name="LLRPERSYMBOL" value="2" />
+  <parameter name="ISFULLSTREAMING" value="1" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="design_env" value="NATIVE" />
+  <parameter name="THROUGHPUT" value="0.0" />
+  <parameter name="MODULE" value="Decoder" />
+  <parameter name="CODE" value="0" />
+  <parameter name="CHANNEL" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="ISLAYERED" value="1" />
+  <parameter name="NBVARGROUP" value="90" />
+  <parameter name="ATTENUATION" value="1" />
+  <parameter name="LAYER" value="10.0" />
+  <generatedFiles>
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/LDPCdecoder_ldpc_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/LDPCdecoder_ldpc_0_decoder.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_pkg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_mat.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.ocp"
+       type="OTHER"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/top_hw/altera_ldpc_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/src/dec/altera_ldpc_dec/altera_ldpc_dec_hw.tcl" />
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/src/ldpc_ucores/dec/altera_ldpc_wimedia_msa/altera_ldpc_wimedia_msa_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="LDPCdecoder" as="ldpc_0" />
+  <messages>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc "submodules/LDPCdecoder_ldpc_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="ldpc_0"><![CDATA["<b>ldpc_0</b>" reuses <b>altera_ldpc_dec</b> "<b>submodules/LDPCdecoder_ldpc_0_decoder</b>"]]></message>
+   <message level="Info" culprit="ldpc_0"><![CDATA["<b>LDPCdecoder</b>" instantiated <b>altera_ldpc</b> "<b>ldpc_0</b>"]]></message>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc_dec "submodules/LDPCdecoder_ldpc_0_decoder"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="decoder"><![CDATA["<b>decoder</b>" reuses <b>altera_ldpc_wimedia_msa</b> "<b>submodules/altera_ldpc_wimedia_msa</b>"]]></message>
+   <message level="Info" culprit="decoder"><![CDATA["<b>ldpc_0</b>" instantiated <b>altera_ldpc_dec</b> "<b>decoder</b>"]]></message>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc_wimedia_msa "submodules/altera_ldpc_wimedia_msa"</message>
+   <message level="Info" culprit="dec_msa"><![CDATA["<b>decoder</b>" instantiated <b>altera_ldpc_wimedia_msa</b> "<b>dec_msa</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_ldpc_dec:18.1:ATTENUATION=1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,BITSPERSYMBOL=2,CHANNEL=1,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,LDPC_TYPE=WiMedia,N=1200,NBCHECKGROUP=12,NBVARGROUP=44,NB_ITE=10,PAR=2,S=4,SOFTBITS=3,TRANSMIT_PARITY=0,design_env=NATIVE(clock_source:18.1:clockFrequency=50000000,clockFrequencyKnown=false,inputClockFrequency=0,resetSynchronousEdges=DEASSERT)(altera_ldpc_wimedia_msa:18.1:ATTENUATION=1,BITSPERSYMBOL=2,CHANNEL=1,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,LDPC_TYPE=DVB,N=1200,NBCHECKGROUP=8,NBVARGROUP=40,NB_ITE=10,PAR=2,S=4,SOFTBITS=3,TRANSMIT_PARITY=0,design_env=NATIVE)(clock:18.1:)(reset:18.1:)"
+   instancePathKey="LDPCdecoder:.:ldpc_0:.:decoder"
+   kind="altera_ldpc_dec"
+   version="18.1"
+   name="LDPCdecoder_ldpc_0_decoder">
+  <parameter name="NBCHECKGROUP" value="12" />
+  <parameter name="PAR" value="2" />
+  <parameter name="TRANSMIT_PARITY" value="0" />
+  <parameter name="LDPC_TYPE" value="WiMedia" />
+  <parameter name="BITSPERSYMBOL" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="NB_ITE" value="10" />
+  <parameter name="ISVARRATE" value="0" />
+  <parameter name="ISFULLSTREAMING" value="1" />
+  <parameter name="N" value="1200" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="design_env" value="NATIVE" />
+  <parameter name="SOFTBITS" value="3" />
+  <parameter name="S" value="4" />
+  <parameter name="CHANNEL" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="ISLAYERED" value="1" />
+  <parameter name="NBVARGROUP" value="44" />
+  <parameter name="ATTENUATION" value="1" />
+  <parameter name="EXTRALATENCY" value="0" />
+  <generatedFiles>
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/LDPCdecoder_ldpc_0_decoder.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_pkg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_mat.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.ocp"
+       type="OTHER"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/src/dec/altera_ldpc_dec/altera_ldpc_dec_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/src/ldpc_ucores/dec/altera_ldpc_wimedia_msa/altera_ldpc_wimedia_msa_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="LDPCdecoder_ldpc_0" as="decoder" />
+  <messages>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc_dec "submodules/LDPCdecoder_ldpc_0_decoder"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="decoder"><![CDATA["<b>decoder</b>" reuses <b>altera_ldpc_wimedia_msa</b> "<b>submodules/altera_ldpc_wimedia_msa</b>"]]></message>
+   <message level="Info" culprit="decoder"><![CDATA["<b>ldpc_0</b>" instantiated <b>altera_ldpc_dec</b> "<b>decoder</b>"]]></message>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc_wimedia_msa "submodules/altera_ldpc_wimedia_msa"</message>
+   <message level="Info" culprit="dec_msa"><![CDATA["<b>decoder</b>" instantiated <b>altera_ldpc_wimedia_msa</b> "<b>dec_msa</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_ldpc_wimedia_msa:18.1:ATTENUATION=1,BITSPERSYMBOL=2,CHANNEL=1,EXTRALATENCY=0,ISFULLSTREAMING=1,ISLAYERED=1,ISVARRATE=0,LDPC_TYPE=DVB,N=1200,NBCHECKGROUP=8,NBVARGROUP=40,NB_ITE=10,PAR=2,S=4,SOFTBITS=3,TRANSMIT_PARITY=0,design_env=NATIVE"
+   instancePathKey="LDPCdecoder:.:ldpc_0:.:decoder:.:dec_msa"
+   kind="altera_ldpc_wimedia_msa"
+   version="18.1"
+   name="altera_ldpc_wimedia_msa">
+  <parameter name="NBCHECKGROUP" value="8" />
+  <parameter name="PAR" value="2" />
+  <parameter name="TRANSMIT_PARITY" value="0" />
+  <parameter name="LDPC_TYPE" value="DVB" />
+  <parameter name="BITSPERSYMBOL" value="2" />
+  <parameter name="NB_ITE" value="10" />
+  <parameter name="ISVARRATE" value="0" />
+  <parameter name="ISFULLSTREAMING" value="1" />
+  <parameter name="N" value="1200" />
+  <parameter name="design_env" value="NATIVE" />
+  <parameter name="SOFTBITS" value="3" />
+  <parameter name="S" value="4" />
+  <parameter name="CHANNEL" value="1" />
+  <parameter name="ISLAYERED" value="1" />
+  <parameter name="NBVARGROUP" value="40" />
+  <parameter name="ATTENUATION" value="1" />
+  <parameter name="EXTRALATENCY" value="0" />
+  <generatedFiles>
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_pkg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_mat.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/henan21/Dropbox/nan/TestV2/verilog/LDPCdecoder/synthesis/submodules/altera_ldpc_wimedia_msa.ocp"
+       type="OTHER"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/intelfpga_lite/18.1/ip/altera/dsp/altera_ldpc/src/ldpc_ucores/dec/altera_ldpc_wimedia_msa/altera_ldpc_wimedia_msa_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="LDPCdecoder_ldpc_0_decoder" as="dec_msa" />
+  <messages>
+   <message level="Debug" culprit="LDPCdecoder">queue size: 0 starting:altera_ldpc_wimedia_msa "submodules/altera_ldpc_wimedia_msa"</message>
+   <message level="Info" culprit="dec_msa"><![CDATA["<b>decoder</b>" instantiated <b>altera_ldpc_wimedia_msa</b> "<b>dec_msa</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

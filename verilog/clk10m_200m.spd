@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="clk10m_200m_sim/clk10m_200m.vo" type="VERILOG" />
+ <topLevel name="clk10m_200m" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

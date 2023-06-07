@@ -1,0 +1,115 @@
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_TOOL_VERSION "18.1"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "LDPCencode" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../LDPCencode.sopcinfo"]
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name SLD_INFO "QSYS_NAME LDPCencode HAS_SOPCINFO 1 GENERATION_ID 1672453369"
+set_global_assignment -library "LDPCencode" -name MISC_FILE [file join $::quartus(qip_path) "../LDPCencode.cmp"]
+set_global_assignment -library "LDPCencode" -name SLD_FILE [file join $::quartus(qip_path) "LDPCencode.debuginfo"]
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone V}"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "LDPCencode" -name MISC_FILE [file join $::quartus(qip_path) "../../LDPCencode.qsys"]
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_NAME "TERQQ2VuY29kZQ=="
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_DISPLAY_NAME "TERQQ2VuY29kZQ=="
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY3MjQ1MzM2OQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "LDPCencode" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_NAME "TERQQ2VuY29kZV9sZHBjXzA="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_DISPLAY_NAME "TERQQw=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_VERSION "MTguMQ=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_DESCRIPTION "QWx0ZXJhIExEUEM="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "ZGVzaWduX2Vudg==::TkFUSVZF::ZGVzaWduX2Vudg=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TERQQ19UWVBF::V2lNZWRpYQ==::U3RhbmRhcmQ="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TU9EVUxF::RW5jb2Rlcg==::TG93IERlbnNpdHkgUGFyaXR5IENoZWNrIGNvZGUgbW9kdWxl"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Q0hBTk5FTA==::MQ==::TnVtYmVyIG9mIGNoYW5uZWxz"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Tg==::MQ==::Q29kZXdvcmQgbGVuZ3Ro"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "UkFURQ==::MA==::Q29kaW5nIHJhdGU="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TkJDSEVDS0dST1VQ::OTA=::TkJDSEVDS0dST1VQ"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TkJWQVJHUk9VUA==::OTA=::TkJWQVJHUk9VUA=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QklUU1BFUlNZTUJPTA==::MQ==::TnVtYmVyIG9mIGJpdHMgcGVyIGlucHV0IHN5bWJvbA=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TExSUEVSU1lNQk9M::Mg==::TnVtYmVyIG9mIExMUnMgcGVyIGlucHV0IHN5bWJvbA=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "U09GVEJJVFM=::Mw==::TnVtYmVyIG9mIHNvZnQgYml0cyBwZXIgaW5wdXQgTExS"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TkJfSVRF::MTA=::TnVtYmVyIG9mIGRlY29kaW5nIGl0ZXJhdGlvbnM="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "UEFS::Mg==::UGFyYWxsZWxpc20="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Uw==::NA==::V2lkdGggb2YgdGhlIGRlY29kZXIgdmFyaWFibGVz"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVRURU5VQVRJT04=::MQ==::TVNBIGF0dGVudWF0aW9uIGZhY3Rvcg=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "SVNGVUxMU1RSRUFNSU5H::MQ==::RnVsbC1zdHJlYW1pbmcgYXJjaGl0ZWN0dXJl"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "SVNMQVlFUkVE::MQ==::VXNlIExheWVyZWQgZGVjb2Rpbmc="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "VFJBTlNNSVRfUEFSSVRZ::MA==::T3V0cHV0IHBhcml0eS1jaGVjayBiaXRz"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "SVNWQVJSQVRF::MA==::VmFyaWFibGUgY29kZSByYXRl"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "RVhUUkFMQVRFTkNZ::MA==::RXh0cmEgcGlwZWxpbmluZyBzdGFnZXM="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TEFZRVI=::MTAuMA==::QXZlcmFnZSBudW1iZXIgb2YgZGVjb2RlZCBsYXllcnM="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Q09ERQ==::MA==::Q29tcHV0ZSB0aHJvdWdocHV0IGZvciBjb2RlIHJhdGU="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "c2VsZWN0ZWRfZGV2aWNlX2ZhbWlseQ==::Q3ljbG9uZSBW::c2VsZWN0ZWRfZGV2aWNlX2ZhbWlseQ=="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_NAME "TERQQ2VuY29kZV9sZHBjXzBfZW5jb2Rlcg=="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_DISPLAY_NAME "TERQQyBFbmNvZGVy"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_VERSION "MTguMQ=="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_DESCRIPTION "QWx0ZXJhIExEUEMgRW5jb2Rlcg=="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "ZGVzaWduX2Vudg==::TkFUSVZF::ZGVzaWduX2Vudg=="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TERQQ19UWVBF::V2lNZWRpYQ==::U3RhbmRhcmQ="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Q0hBTk5FTA==::MQ==::TnVtYmVyIG9mIGNoYW5uZWxz"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QklUU1BFUlNZTUJPTA==::MQ==::TnVtYmVyIG9mIGJpdHMgcGVyIGlucHV0IHN5bWJvbA=="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Tg==::MTIwMA==::Q29kZXdvcmQgbGVuZ3Ro"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TkJDSEVDS0dST1VQ::MTI=::TkJDSEVDS0dST1VQ"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TkJWQVJHUk9VUA==::MzI=::TkJWQVJHUk9VUA=="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "SVNWQVJSQVRF::MA==::VmFyaWFibGUgY29kZSByYXRl"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_NAME "YWx0ZXJhX2xkcGNfd2ltZWRpYV9lbmM="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_DISPLAY_NAME "TERQQyBEVkIgRW5jb2Rlcg=="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_VERSION "MTguMQ=="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_DESCRIPTION "QWx0ZXJhIExEUEMgV2lNZWRpYSBFbmNvZGVy"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "ZGVzaWduX2Vudg==::TkFUSVZF::ZGVzaWduX2Vudg=="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TERQQ19UWVBF::RFZC::U3RhbmRhcmQ="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Q0hBTk5FTA==::MQ==::TnVtYmVyIG9mIGNoYW5uZWxz"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "QklUU1BFUlNZTUJPTA==::MQ==::TnVtYmVyIG9mIGJpdHMgcGVyIGlucHV0IHN5bWJvbA=="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "Tg==::MTIwMA==::Q29kZXdvcmQgbGVuZ3Ro"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TkJDSEVDS0dST1VQ::OA==::TkJDSEVDS0dST1VQ"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "TkJWQVJHUk9VUA==::MzI=::TkJWQVJHUk9VUA=="
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_COMPONENT_PARAMETER "SVNWQVJSQVRF::MA==::VmFyaWFibGUgY29kZSByYXRl"
+
+set_global_assignment -library "LDPCencode" -name VERILOG_FILE [file join $::quartus(qip_path) "LDPCencode.v"]
+set_global_assignment -library "LDPCencode" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/LDPCencode_ldpc_0.v"]
+set_global_assignment -library "LDPCencode" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/LDPCencode_ldpc_0_encoder.v"]
+set_global_assignment -library "LDPCencode" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_auto_wimedia_enc_ROM.sv"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_0_data.hex"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_1_data.hex"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_2_data.hex"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_3_data.hex"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_4_data.hex"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_5_data.hex"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_6_data.hex"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc_rom_7_data.hex"]
+set_global_assignment -library "LDPCencode" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_pkg.sv"]
+set_global_assignment -library "LDPCencode" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc.sv"]
+set_global_assignment -library "LDPCencode" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_ldpc_wimedia_enc.ocp"]
+
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_TOOL_NAME "altera_ldpc"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_TOOL_VERSION "18.1"
+set_global_assignment -entity "LDPCencode_ldpc_0" -library "LDPCencode" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_TOOL_NAME "altera_ldpc_enc"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_TOOL_VERSION "18.1"
+set_global_assignment -entity "LDPCencode_ldpc_0_encoder" -library "LDPCencode" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_TOOL_NAME "altera_ldpc_wimedia_enc"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_TOOL_VERSION "18.1"
+set_global_assignment -entity "altera_ldpc_wimedia_enc" -library "LDPCencode" -name IP_TOOL_ENV "Qsys"

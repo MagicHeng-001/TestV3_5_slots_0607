@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/altera_auto_wimedia_enc_ROM.sv"
+   type="SYSTEM_VERILOG"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_0_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_1_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_2_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_3_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_4_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_5_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_6_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc_rom_7_data.hex"
+   type="HEX"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/mentor/altera_ldpc_pkg.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="wimedia"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/altera_ldpc_pkg.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="wimedia"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/altera_ldpc_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/mentor/altera_ldpc_wimedia_enc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="wimedia"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/altera_ldpc_wimedia_enc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="wimedia"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/altera_ldpc_wimedia_enc.sv"
+   type="SYSTEM_VERILOG"
+   library="wimedia" />
+ <file
+   path="simulation/submodules/LDPCencode_ldpc_0_encoder.v"
+   type="VERILOG"
+   library="encoder" />
+ <file
+   path="simulation/submodules/LDPCencode_ldpc_0.v"
+   type="VERILOG"
+   library="ldpc_0" />
+ <file path="simulation/LDPCencode.v" type="VERILOG" />
+ <topLevel name="LDPCencode" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

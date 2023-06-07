@@ -1,0 +1,85 @@
+`timescale 1ns/1ps
+module Transmitter_top
+#(parameter clk1x_freq = 1000, //specified in 0.1KHz
+parameter count1x_threshold = 500000/ clk1x_freq  //default 480
+)
+(CLOCK_50, reset_n, fifo_reset_n, rx_pin, bitstream);
+
+    /*----- I/O PORTS -----*/
+    input  logic CLOCK_50;
+    input   logic fifo_reset_n; 
+	 input   logic rx_pin;	 
+//    input logic [3:0] KEY;
+//    output logic [35: 0 ] GPIO_0;
+	 output logic bitstream;
+//		output  logic [6:0] HEX0, HEX1, HEX2;
+
+    input logic reset_n;
+	 
+//parameter clk1x_freq = 1000; //specified in 0.1KHz
+//parameter count1x_threshold = 500000/ clk1x_freq;  //default 480
+    
+//	 assign HEX0 = 7'b0_001_000;//a
+//	 assign HEX1 = 7'b100_1110;//r
+//    assign HEX2 = 7'b000_0111;//t
+    /*----- Internal Signals -----*/
+
+    logic [7:0] rx_data;    // Decoded UART DATA/FIFO INPUT DATA
+    logic rx_data_valid;    // Decoded UART DATA VALID FLAG/ FIFO WRITE ENABLE FLAG
+ 
+    logic fifo_wr_en;
+    logic fifo_rd_en;           // FIFO TEAD ENABLE FLAG
+    logic [7:0] fifo_data_out;  // FIFO OUTPUT DATA
+    logic fifo_empty;           // FIFO EMPTY FLAG
+
+//    logic bitstream;            // BITSTREAM/ PPM INPUT
+    logic bitstream_valid;      // DATA VALID FLAG
+	 
+
+	 	// Outputs
+ 
+    /*----- Module Instantiations -----*/
+	 
+    UART_RX RX
+    (
+	    .clk            (CLOCK_50),             
+	    .rst_n          (fifo_reset_n),      
+	    .rx_data        (rx_data),          
+	    .rx_data_valid  (fifo_wr_en),
+	    .rx_data_ready  (1'b1),         //data receiver module ready
+	    .rx_pin         (rx_pin)     //serial data input
+    );
+
+
+
+    FIFO_TX FIFO
+     (
+	    .aclr(~fifo_reset_n),
+	    .data(rx_data),
+	    .rdclk(CLOCK_50),
+	    .rdreq(fifo_rd_en),
+	    .wrclk(CLOCK_50),
+	    .wrreq(fifo_wr_en),
+	    .q(fifo_data_out),
+	    .rdempty(fifo_empty),
+	    .wrfull()                   // Should never be full when sending 960 bytes of data via UART
+    );
+
+    BitstreamGenerator 
+	 	#(.clk1x_freq(clk1x_freq),
+	.count1x_threshold(count1x_threshold)) 
+	BitstreamGenerator
+    (   
+        .clk(CLOCK_50), 
+        .reset_n(reset_n), 
+        .empty_flag(fifo_empty), 
+        .fifo_rd_en(fifo_rd_en), 
+        .fifo_data(fifo_data_out), 
+        .bitstream(bitstream), 
+        .bitstream_valid(bitstream_valid), 
+        .ook_ready(1'b1)
+    );
+	 
+
+
+endmodule

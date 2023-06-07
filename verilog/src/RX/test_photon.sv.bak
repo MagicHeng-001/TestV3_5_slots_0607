@@ -1,0 +1,202 @@
+module test_photon#(parameter clk1x_freq = 100, //specified in 0.1KHz
+parameter count1x_threshold = 500000/ clk1x_freq  //default 480
+)(
+    input  logic clk1m,
+	 input  logic CLOCK_50,
+//    input  logic clk48m,
+    input  logic reset_n, 
+    //output logic ADC_CH_B_CLK,
+    //input  logic [11: 0] ADC_IN,
+	 input  logic rxdata,
+    output logic ppm,
+    input  logic cal_sw,
+	 input  logic [3:0] offset
+);
+
+    /* Parameter */
+   // parameter  clk1x_freq = 100; //specified in 0.1KHz  12
+    //localparam count1x_threshold = 480000/ clk1x_freq ; //default 48
+    localparam count4x_threshold = count1x_threshold >> 2 ;  //default 12
+	 
+	 parameter bits_width = 6;
+
+    logic [20: 0] count4x_counter;
+
+    logic [1 :0] state;
+    localparam IDLE = 0, SEND = 1, WAIT =2;
+	logic [36: 0] lpf_data;
+    logic [bits_width +6 : 0] noise_level_threshold;
+    logic [bits_width :0] noise_level_avg;
+	 
+	 logic [6:0] num;
+	//  logic [bits_width: 0] num_reg_1, num_reg_2;
+	  logic [bits_width + 6: 0] num_sum;
+	 testcounting
+		#(.bits_length(24)) 
+	 photoncounting(
+		.CLOCK_50(CLOCK_50),
+		.clk1m(clk1m),
+		.rst_n(reset_n),
+		.inputIO(rxdata),
+		.num(num),
+		.num_sum(num_sum)
+	);
+	/*
+    fir_IP filter
+    (
+	    .clk(clk1m),
+	    .reset_n(reset_n),
+	    .adc_data(ADC_IN),
+	    .lpf_data(lpf_data)
+    );
+
+	NOISE_AVG 
+	#(.bits_length(6))
+	avg
+	(
+		.reset_n(reset_n),
+		.clk(clk1m),
+		.cal_sw(cal_sw),
+		.lpf_data(num),
+		.noise_level_avg(noise_level_avg)
+	);
+	*/ 
+
+    logic [1 : 0] peak_detect_state;
+    localparam RegisterA = 0, RegisterB = 1, Compare =2;
+    logic ppm_out;
+    logic clk1m_state;
+	 
+	 
+	 
+    always_ff@ (posedge CLOCK_50 or negedge reset_n) 
+    begin
+       if(~reset_n) {state, count4x_counter, ppm, noise_level_threshold} <= 0;
+        else begin
+//		   noise_level_threshold <= (noise_level_avg +  ({37{offset[3]}} & (noise_level_avg >> 10) )+ ({37{offset[2]}} & (noise_level_avg >> 11) ) +({37{offset[1]}} & (noise_level_avg >> 12) +({37{offset[0]}} & (noise_level_avg >> 13))));
+         noise_level_threshold <= 40+ (offset[3] <<8) +(offset[2] <<7)+(offset[1] <<6)+(offset[0] <<5);
+				 case(state)
+                IDLE: 
+                begin
+                    ppm <= ( num_sum > noise_level_threshold)? 1: 0;
+                    state <=( num_sum > noise_level_threshold)? SEND : 0;
+                    count4x_counter <=0;
+                end
+
+                SEND:
+                begin
+                    if(count4x_counter === count4x_threshold) begin
+                        count4x_counter <= 0;
+                        state <= WAIT;
+                        ppm <=0;
+                    end
+                    else begin
+                        count4x_counter<= count4x_counter +1'b1;
+                        ppm <= 1;
+                    end
+                end
+                
+                WAIT:
+                begin
+                    if(count4x_counter === count4x_threshold << 1) begin
+                        count4x_counter <= 0;
+                        state <= IDLE;
+                    end
+                    else begin
+                        count4x_counter<= count4x_counter +1'b1;
+                    end
+                end
+            endcase
+        end
+    end
+
+//    always_ff@ (posedge clk48m or negedge reset_n) 
+//    begin
+//       if(~reset_n) {state, count4x_counter, ppm} <= 0;
+//        else begin
+//             case(state)
+//                IDLE: 
+//                begin
+//                    ppm<= ppm_out;
+//                    state <= clk1m_state;
+//                    count4x_counter <= 0;
+//                end
+//
+//                SEND:
+//                begin
+//                    if(count4x_counter === count4x_threshold) begin
+//                        count4x_counter <= 0;
+//                        state <= WAIT;
+//                        ppm <=0;
+//                    end
+//                    else begin
+//                        count4x_counter<= count4x_counter +1'b1;
+//                        ppm <= 1;
+//                    end
+//                end
+//                
+//                WAIT:
+//                begin
+//                    if(count4x_counter === count4x_threshold << 1) begin
+//                        count4x_counter <= 0;
+//                        state <= IDLE;
+//                    end
+//                    else begin
+//                        count4x_counter<= count4x_counter +1'b1;
+//                    end
+//                end
+//            endcase
+//        end
+//    end
+
+    
+    //assign noise_level_avg = noise_level_max >> 1 +noise_level_max >> 2;
+    
+//    always_ff@(posedge clk1m or negedge reset_n) begin
+//        if(~reset_n) {peak_detect_state, num_reg_1, num_reg_2,clk1m_state, ppm_out,  noise_level_threshold} <=0;
+//        else begin
+//               noise_level_threshold <= (noise_level_avg +  ({37{offset[3]}} & (noise_level_avg >> 10) )+ ({37{offset[2]}} & (noise_level_avg >> 11) ) +({37{offset[1]}} & (noise_level_avg >> 12) +({37{offset[0]}} & (noise_level_avg >> 13))));
+//                if( num > noise_level_threshold && state === IDLE) begin
+//                    case(peak_detect_state)
+//                        RegisterA: begin
+//                            ppm_out <= 0;
+//                            clk1m_state <=0;
+//                            num_reg_1 <= num;
+//                            peak_detect_state <= RegisterB;
+//                            
+//                        end
+//
+//                        RegisterB: begin
+//                            if(num > num_reg_1 || num_reg_2> num_reg_1) begin
+//                                num_reg_2 <= num;
+//                                peak_detect_state <= Compare;
+//                            end
+//                            else begin 
+//                                num_reg_1 <= num;
+//                            end
+//                        end
+//
+//                        Compare: begin
+//                            if(num <= num_reg_2 ) begin
+//                                {ppm_out} <=1 ;
+//                                clk1m_state <= 1'b1;
+//                                peak_detect_state <= RegisterA;
+//                                {num_reg_2,num_reg_1} <=0;
+//                                //noise_level_max <= (lpf_data > noise_level_max && ~cal_sw) ? (lpf_data +4'd10) : noise_level_max;
+//                            end
+//                            else begin 
+//                                peak_detect_state <= RegisterB;
+//                                num_reg_1 <= num_reg_2;
+//                                num_reg_2 <=  num;
+//                            end
+//                        end
+//                        default{peak_detect_state, num_reg_1, num_reg_2,clk1m_state, ppm_out} <=0;
+//                    endcase
+//        end
+//            else {ppm_out, clk1m_state }<= 0;
+//        end
+//    end
+
+
+
+endmodule
